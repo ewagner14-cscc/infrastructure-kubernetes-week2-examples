@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+
+kind: ReplicaSet
+
+metadata:
+
+  name: wp-replica
+
+spec:
+
+  replicas: 2
+
+  selector:
+
+    matchLabels:
+
+      app_name: mywp
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app_name: mywp
+
+    spec:
+
+      containers:
+
+      - name: wp
+
+        image: wordpress:latest
+
+        ports:
+
+        - containerPort: 80

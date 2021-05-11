@@ -1,0 +1,22 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  name: pod-wp
+  labels:
+   appname: mywp
+ 
+
+spec:
+
+  containers:
+
+  - name: wp
+
+    image: wordpress:latest
+
+    ports:
+
+    - containerPort: 80
