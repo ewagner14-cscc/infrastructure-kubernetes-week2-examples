@@ -44,3 +44,18 @@ spec:
       resources:
         requests:
           storage: 1Gi
+
+# show how they come up in order
+# Run example stateful set
+# Run two replicas first
+# k apply -f statefulsetex.yaml
+# Then run
+#  k get pods -w -l app=nginx
+# Show the two created, increate to 5
+# Apply
+# Then immediately show the output in another terminal
+#  k get pods -w -l app=nginx
+# Show how they get created in order
+# Delete 3 of them, and show how they get rebuilt
+# k get pods -w -l app=nginx
+# https://kubernetes.io/docs/tutorials/stateful-application/

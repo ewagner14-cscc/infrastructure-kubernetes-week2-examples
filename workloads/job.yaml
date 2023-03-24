@@ -13,3 +13,13 @@ spec:
         image: busybox
         command: ["echo", "Running a job."]
       restartPolicy: OnFailure
+
+# Show example
+
+# Apply
+
+# Show the log of the job
+
+# k logs job/say-something                                                                                                                                                                     130 ↵
+# Found 5 pods, using pod/say-something-lg5sh
+# Running a job
