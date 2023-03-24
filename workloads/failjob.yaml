@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: failing-job
+spec:
+  completions: 5
+  backoffLimit: 2
+  activeDeadlineSeconds: 20
+  template:
+    metadata:
+      name: failing-job
+    spec:
+      containers:
+      - name: fail
+        image: busybox
+        command: ["exit", "0"]
+      restartPolicy: Never
